@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAMA CRAFT - BY NATY | Premium Luxury Art & Home Decor</title>
+
+        
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <style>
+        /* =========================================================
+           RAMA CRAFT - BY NATY
+           Complete Luxury Styling
+        ========================================================= */
+
+        :root {
+            --bg-dark: #0d0d0d;
+            --bg-card: #171717;
+            --bg-card-hover: #222222;
+            --gold: #f6b036;
+            --gold-light: #fcd581;
+            --gold-dark: #c28315;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #2a2a2a;
+            --red: #721519;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Poppins', sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: radial-gradient(circle at 88% 2%, rgba(114, 21, 25, 0.5), transparent 30%), radial-gradient(circle at 8% 92%, rgba(246, 176, 54, 0.12), transparent 24%), linear-gradient(115deg, #080808 0%, #15100d 48%, #080808 100%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.modal-open,
+        body.drawer-open {
+            overflow: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* ANNOUNCEMENT BAR */
+        .announcement {
+            background: linear-gradient(90deg, #111111, #251b08, #111111);
+            border-bottom: 1px solid rgba(246, 176, 54, 0.2);
+            font-size: 13px;
+            padding: 8px 0;
+            color: var(--gold-light);
+        }
+
+        .announcement-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .announcement-contact {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .announcement-contact a:hover {
+            color: #ffffff;
+        }
+
+        /* HEADER & NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: linear-gradient(90deg, rgba(8, 8, 8, 0.97), rgba(114, 21, 25, 0.2), rgba(8, 8, 8, 0.97));
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(246, 176, 54, 0.25);
+            padding: 14px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+        }
+
+        .brand-text strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 18px;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            line-height: 1.1;
+        }
+
+        .brand-text small {
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .icon-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .cart-button #cart-count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--gold);
+            color: #000;
+            font-size: 10px;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .auth-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .admin-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+            background: rgba(246, 176, 54, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            transition: 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .admin-btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .admin-badge {
+            position: absolute;
+            bottom: -6px;
+            font-size: 8px;
+            background: var(--gold);
+            color: #000;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 20px;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--bg-card);
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-nav.open {
+            display: flex;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 100px 0 120px;
+            background: radial-gradient(circle at center, #261b09 0%, #0d0d0d 70%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            display: block;
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #000;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 30px;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .gold-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(246, 176, 54, 0.3);
+        }
+
+        .outline-btn {
+            background: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border);
+            font-weight: 500;
+            padding: 12px 28px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .outline-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-feature i {
+            color: var(--gold);
+        }
+
+        /* SECTION STYLES */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .section-heading h2 {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        /* CATALOG TOOLBAR */
+        .catalog-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            font-weight: 500;
+        }
+
+        .search-box {
+            position: relative;
+            width: 250px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 8px 16px 8px 38px;
+            color: var(--text-light);
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--gold);
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(246, 176, 54, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-image {
+            position: relative;
+            height: 220px;
+            background: #222;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-category {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            color: var(--gold);
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(246, 176, 54, 0.3);
+        }
+
+        .product-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-body h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+
+            /* Limit lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-body p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            flex-grow: 1;
+
+            /* Limit lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+        }
+
+        .product-price {
+            font-weight: 600;
+            color: var(--gold-light);
+            font-size: 14px;
+        }
+
+        .no-products {
+            text-align: center;
+            padding: 60px 0;
+            color: var(--text-muted);
+        }
+
+        .no-products i {
+            font-size: 40px;
+            margin-bottom: 12px;
+            color: var(--gold);
+        }
+
+        /* CUSTOM ORDER SECTION */
+        .custom-section {
+            background: #111111;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .custom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .custom-info h2 span {
+            color: var(--gold);
+        }
+
+        .custom-points {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .custom-points div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .custom-points i {
+            color: var(--gold);
+        }
+
+        .custom-form {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .custom-form h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: #111;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            color: var(--text-light);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .full-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--gold);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .about-content h2 span {
+            color: var(--gold);
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #090909;
+            border-top: 1px solid var(--border);
+            padding-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand img {
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-heading);
+            color: var(--gold);
+            font-size: 18px;
+        }
+
+        .footer-brand span {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer-column h4 {
+            font-size: 15px;
+            margin-bottom: 18px;
+            color: var(--text-light);
+        }
+
+        .footer-column a,
+        .footer-column span {
+            display: block;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* CART DRAWER */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .cart-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 100%;
+            max-width: 380px;
+            height: 100%;
+            background: var(--bg-card);
+            z-index: 201;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid var(--border);
+        }
+
+        .cart-drawer.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h2 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .cart-header button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 20px;
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+        }
+
+        .empty-cart i {
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 12px;
+            background: #111;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            align-items: center;
+        }
+
+        .cart-item-image img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .cart-item-info h4 {
+            font-size: 13px;
+        }
+
+        .cart-item-info span {
+            font-size: 12px;
+            color: var(--gold);
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .quantity-controls button {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+        }
+
+        .remove-cart-item {
+            background: none;
+            border: none;
+            color: #ef4444;
+            padding: 6px;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        /* MODALS */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .auth-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .auth-logo {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+
+        .auth-box h2 {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .auth-box p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .phone-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .phone-input select {
+            background: #111;
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            border-radius: var(--radius-sm);
+            padding: 8px;
+        }
+
+        .phone-input input {
+            flex-grow: 1;
+            background: #111;
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            border-radius: var(--radius-sm);
+            padding: 8px 12px;
+        }
+
+        .auth-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-actions button {
+            flex: 1;
+            justify-content: center;
+        }
+
+        .auth-divider {
+            margin: 16px 0;
+            position: relative;
+        }
+
+        .auth-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .auth-divider span {
+            background: var(--bg-card);
+            position: relative;
+            padding: 0 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* ADMIN MODAL STYLES */
+        .admin-box {
+            max-width: 550px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            background: radial-gradient(circle at 88% 2%, rgba(114, 21, 25, 0.5), transparent 30%), radial-gradient(circle at 8% 92%, rgba(246, 176, 54, 0.12), transparent 24%), linear-gradient(115deg, #080808 0%, #15100d 48%, #080808 100%);
+            border-color: rgba(246, 176, 54, 0.35);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65), 0 0 24px rgba(246, 176, 54, 0.08);
+            text-align: left;
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        .password-field input {
+            width: 100%;
+            padding-right: 42px;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            padding: 6px;
+        }
+
+        .password-toggle:hover {
+            color: var(--gold);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(246, 176, 54, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .admin-header h2 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            color: var(--gold);
+        }
+
+        .admin-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .admin-action-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .logout-btn {
+            padding: 6px 14px;
+            font-size: 12px;
+        }
+
+        .product-admin-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .edit-btn {
+            background: var(--gold);
+            color: #000;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .edit-btn:hover {
+            background: var(--gold-light);
+        }
+
+        .delete-btn {
+            background: #a81c1c;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .delete-btn:hover {
+            background: #e62e2e;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* PRODUCT DETAIL MODAL */
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .modal-product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .modal-product-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+
+        .modal-product-info h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-product-info p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .modal-category {
+            font-size: 12px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* TOAST */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: #000;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            z-index: 400;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .custom-grid,
+            .about-grid,
+            .footer-grid,
+            .modal-product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        <div class="container announcement-inner">
+            <span>
+                <i class="fa-solid fa-sparkles"></i>
+                <span id="announcement-text">Custom Luxury Epoxy Arts, Neon Lights & Premium Decor</span>
+            </span>
+
+            <div class="announcement-contact">
+                <a href="tel:+251966007247">
+                    <i class="fa-solid fa-phone"></i>
+                    +251 966 007 247
+                </a>
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Bishoftu, Ethiopia
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="#home" class="brand">
+                <img
+                    src="assets/logo.png.png"
+                    alt="RAMA CRAFT Logo"
+                    class="brand-logo"
+                    onerror="this.src='https://via.placeholder.com/100/f6b036/000000?text=RAMA'"
+                >
+                <div class="brand-text">
+                    <strong id="brand-name">RAMA CRAFT</strong>
+                    <small id="brand-tagline">BY NATY</small>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#custom">Custom Order</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button
+                    class="icon-btn"
+                    onclick="focusSearch()"
+                    aria-label="Search"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button
+                    class="icon-btn cart-button"
+                    onclick="toggleCartDrawer()"
+                    aria-label="Cart"
+                >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+
+                <button
+                    class="auth-btn"
+                    onclick="openAuthModal()"
+                >
+                    <i class="fa-regular fa-user"></i>
+                    <span id="auth-button-text">Sign In</span>
+                </button>
+
+                <button
+                    class="mobile-menu-btn"
+                    onclick="toggleMobileNav()"
+                    aria-label="Menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-nav" class="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#custom">Custom Order</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <span class="eyebrow">HANDMADE • PREMIUM • CUSTOM</span>
+                <h1>
+                    <span id="hero-title">Transform Your Space</span>
+                    <span id="hero-subtitle">With Epoxy Art & Custom Lighting</span>
+                </h1>
+                <p id="hero-description">Discover handmade epoxy artwork, custom neon lights, shine photo frames, light boxes and premium home decor crafted by RAMA CRAFT.</p>
+
+                <div class="hero-buttons">
+                    <a href="#collections" class="gold-btn">
+                        Explore Collections
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#custom" class="outline-btn">Create Your Own</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Custom Designs</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                        <span>Handcrafted</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fa-solid fa-truck"></i>
+                        <span>Delivery Available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLLECTIONS -->
+        <section id="collections" class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">OUR COLLECTION</span>
+                    <h2 id="collection-title">Crafted For Your Space</h2>
+                    <p id="collection-description">Explore our premium handmade products and find something special for your home or business.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="catalog-toolbar">
+                    <div class="category-filters">
+                        <button class="category-btn active" onclick="filterCategory('All')">All Pieces</button>
+                        <button class="category-btn" onclick="filterCategory('Epoxy Wall Art')">Epoxy Wall Art</button>
+                        <button class="category-btn" onclick="filterCategory('Shine Photos')">Shine Photos</button>
+                        <button class="category-btn" onclick="filterCategory('Neon Lights')">Neon Lights</button>
+                        <button class="category-btn" onclick="filterCategory('Light Boxes')">Light Boxes</button>
+                        <button class="category-btn" onclick="filterCategory('Home Decor')">Home Decor</button>
+                    </div>
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="search"
+                            id="catalog-search"
+                            placeholder="Search products..."
+                            oninput="handleSearch()"
+                        >
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="products-grid" class="products-grid"></div>
+
+                <!-- No Products Found -->
+                <div id="no-products" class="no-products hidden">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h3>No products found</h3>
+                    <p>Try another search or category.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CUSTOM ORDER -->
+        <section id="custom" class="section custom-section">
+            <div class="container">
+                <div class="custom-grid">
+                    <div class="custom-info">
+                        <span class="eyebrow">CUSTOM MADE</span>
+                        <h2><span id="custom-title">Create Something</span> <span>Unique</span></h2>
+                        <p id="custom-description-text">Have your own idea? Tell us what you want and RAMA CRAFT will create a custom piece specially for you.</p>
+
+                        <div class="custom-points">
+                            <div><i class="fa-solid fa-check"></i><span>Custom Size</span></div>
+                            <div><i class="fa-solid fa-check"></i><span>Custom Colors</span></div>
+                            <div><i class="fa-solid fa-check"></i><span>Custom Photos</span></div>
+                            <div><i class="fa-solid fa-check"></i><span>Custom Lighting</span></div>
+                        </div>
+                    </div>
+
+                    <form class="custom-form" onsubmit="handleCustomOrderSubmit(event)">
+                        <h3 id="custom-form-title">Request a Custom Order</h3>
+                        <div class="form-group">
+                            <label for="custom-name">Your Name</label>
+                            <input type="text" id="custom-name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-phone">Phone Number</label>
+                            <input type="tel" id="custom-phone" placeholder="+251..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-craft">Craft Type</label>
+                            <select id="custom-craft" required>
+                                <option value="">Select craft type</option>
+                                <option value="Epoxy Wall Art">Epoxy Wall Art</option>
+                                <option value="Shine Photo">Shine Photo</option>
+                                <option value="Neon Light">Neon Light</option>
+                                <option value="Light Box">Light Box</option>
+                                <option value="Home Decor">Home Decor</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-description">Describe Your Idea</label>
+                            <textarea id="custom-description" rows="5" placeholder="Tell us about your design, size, colors, photo, etc." required></textarea>
+                        </div>
+                        <button type="submit" class="gold-btn full-btn">
+                            <i class="fa-brands fa-telegram"></i> Send Custom Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="assets/logo.jpg" alt="RAMA CRAFT" onerror="this.src='https://via.placeholder.com/300/f6b036/000000?text=RAMA+CRAFT'">
+                    </div>
+                    <div class="about-content">
+                        <span class="eyebrow">ABOUT RAMA CRAFT</span>
+                        <h2><span id="about-title">Art Made With</span> <span>Passion</span></h2>
+                        <p id="about-description">RAMA CRAFT - BY NATY creates premium handmade epoxy artwork, custom lighting and decorative pieces designed to make your space unique.</p>
+                        <p id="about-secondary">Every piece is carefully designed and crafted with attention to detail, quality and style.</p>
+                        <a href="#custom" class="gold-btn">
+                            Work With Us <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo.png.png" alt="RAMA CRAFT Logo" onerror="this.src='https://via.placeholder.com/100/f6b036/000000?text=RAMA'">
+                <h3>RAMA CRAFT</h3>
+                <span>BY NATY</span>
+                <p id="footer-description">Premium handmade epoxy art, neon lights, shine photos and home decor.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rama.craft.by.naty" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@rama.craft.by.naty" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://t.me/Rama_Craft_By_Naty" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://wa.me/251966007247" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#custom">Custom Order</a>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="tel:+251966007247"><i class="fa-solid fa-phone"></i> +251 966 007 247</a>
+                <a href="tel:+251716088090"><i class="fa-solid fa-phone"></i> +251 716 088 090</a>
+                <a href="https://wa.me/251966007247"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://t.me/Rama_Craft"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <span><i class="fa-solid fa-location-dot"></i> Bishoftu, Ethiopia</span>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <span>Epoxy Art</span>
+                <span>Neon Lights</span>
+                <span>Shine Photos</span>
+                <span>Light Boxes</span>
+                <span>Home Decor</span>
+                <span>Custom Orders</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 RAMA CRAFT - BY NATY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART OVERLAY & DRAWER -->
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCartDrawer(false)"></div>
+    <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Your Cart</h2>
+            <button onclick="toggleCartDrawer(false)" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cart-total">Custom Quote</strong>
+            </div>
+            <button class="gold-btn full-btn" onclick="proceedToCheckout()">
+                <i class="fa-brands fa-telegram"></i> Order via Telegram
+            </button>
+        </div>
+    </aside>
+
+    <!-- AUTH MODAL -->
+    <div id="auth-modal" class="modal">
+        <div id="auth-login-view" class="auth-box">
+            <button class="modal-close" onclick="closeAuthModal()"><i class="fa-solid fa-xmark"></i></button>
+            <img src="assets/logo.png" alt="RAMA CRAFT" class="auth-logo" onerror="this.src='https://via.placeholder.com/100/f6b036/000000?text=RAMA'">
+            <h2>Welcome to RAMA CRAFT</h2>
+            <p>Sign in with your phone to continue.</p>
+
+            <form onsubmit="handlePhoneAuth(event)">
+                <div class="phone-input">
+                    <select id="country-code">
+                        <option value="+251">🇪🇹 +251</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+971">🇦🇪 +971</option>
+                    </select>
+                    <input type="tel" id="phone-number" placeholder="Phone number" required>
+                </div>
+                <div class="auth-actions">
+                    <button type="submit" name="auth-action" value="signin" class="gold-btn">Sign In</button>
+                    <button type="submit" name="auth-action" value="signup" class="outline-btn">Sign Up</button>
+                </div>
+            </form>
+
+            <div class="auth-divider"><span>OR</span></div>
+            <button class="outline-btn full-btn" onclick="closeAuthModal(); openAdminModal()"><i class="fa-solid fa-user-shield"></i> Admin</button>
+            <button class="outline-btn full-btn" onclick="openGuestLogin()"><i class="fa-solid fa-user"></i> Guest</button>
+        </div>
+
+        <div id="guest-login-view" class="auth-box hidden">
+            <button class="modal-close" onclick="closeAuthModal()"><i class="fa-solid fa-xmark"></i></button>
+            <img src="assets/logo.png" alt="RAMA CRAFT" class="auth-logo" onerror="this.src='https://via.placeholder.com/100/f6b036/000000?text=RAMA'">
+            <h2>Continue as Guest</h2>
+            <p>Enter your details to request an order without creating an account.</p>
+
+            <form onsubmit="continueAsGuest(event)">
+                <div class="form-group">
+                    <label for="guest-name">Full Name</label>
+                    <input type="text" id="guest-name" placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="guest-phone">Phone Number</label>
+                    <input type="tel" id="guest-phone" placeholder="+251..." autocomplete="tel" required>
+                </div>
+                <button type="submit" class="gold-btn full-btn"><i class="fa-solid fa-arrow-right"></i> Continue as Guest</button>
+            </form>
+            <button type="button" class="outline-btn full-btn guest-back-btn" onclick="showAuthLogin()">Back to Sign In</button>
+        </div>
+
+    </div>
+
+    <!-- ADMIN MODAL -->
+    <div id="admin-modal" class="modal">
+        <div class="auth-box admin-box">
+            <button class="modal-close" onclick="closeAdminModal()"><i class="fa-solid fa-xmark"></i></button>
+
+            <div id="admin-login-view">
+                <h2>Admin Login</h2>
+                <p>Enter your username and password to manage products.</p>
+                <form onsubmit="handleAdminLogin(event)">
+                    <div class="form-group">
+                        <input type="text" id="admin-username" placeholder="Enter Admin Username" autocomplete="username" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="password-field">
+                            <input type="password" id="admin-password" placeholder="Enter Admin Password" autocomplete="current-password" required>
+                            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('admin-password', this)" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <button type="submit" class="gold-btn full-btn">Login as Admin</button>
+                </form>
+            </div>
+
+            <div id="admin-dashboard-view" class="hidden">
+                <div class="admin-header">
+                    <h2>NATY</h2>
+                    <div class="admin-header-actions">
+                        <button type="button" class="gold-btn admin-action-btn" onclick="startNewProduct()"><i class="fa-solid fa-plus"></i> Add Product</button>
+                        <button type="button" class="outline-btn admin-action-btn" onclick="toggleAdminForm()"><i class="fa-solid fa-user-plus"></i> Add Admin</button>
+                        <button type="button" class="outline-btn admin-action-btn" onclick="toggleContentEditor()"><i class="fa-solid fa-pen"></i> Edit Front Page</button>
+                        <button type="button" class="outline-btn logout-btn" onclick="handleAdminLogout()">Logout</button>
+                    </div>
+                </div>
+
+                <form id="admin-form" class="custom-form hidden" onsubmit="handleAddAdmin(event)">
+                    <h3>Add Another Admin</h3>
+                    <div class="form-group">
+                        <label for="new-admin-username">New Admin Username</label>
+                        <input type="text" id="new-admin-username" autocomplete="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-admin-password">New Admin Password</label>
+                        <div class="password-field">
+                            <input type="password" id="new-admin-password" autocomplete="new-password" minlength="6" required>
+                            <button type="button" class="password-toggle" onclick="togglePasswordVisibility('new-admin-password', this)" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <button type="submit" class="gold-btn full-btn">Add Admin</button>
+                </form>
+
+                <form id="content-form" class="custom-form hidden" onsubmit="handleSaveContent(event)">
+                    <h3>Edit Front Page</h3>
+                    <div class="form-group"><label for="content-announcement">Announcement</label><input type="text" id="content-announcement" required></div>
+                    <div class="form-group"><label for="content-brand-name">Brand Name</label><input type="text" id="content-brand-name" required></div>
+                    <div class="form-group"><label for="content-brand-tagline">Brand Tagline</label><input type="text" id="content-brand-tagline" required></div>
+                    <div class="form-group"><label for="content-hero-title">Hero Title</label><input type="text" id="content-hero-title" required></div>
+                    <div class="form-group"><label for="content-hero-subtitle">Hero Subtitle</label><input type="text" id="content-hero-subtitle" required></div>
+                    <div class="form-group"><label for="content-hero-description">Hero Description</label><textarea id="content-hero-description" rows="3" required></textarea></div>
+                    <div class="form-group"><label for="content-collection-title">Collection Title</label><input type="text" id="content-collection-title" required></div>
+                    <div class="form-group"><label for="content-collection-description">Collection Description</label><textarea id="content-collection-description" rows="2" required></textarea></div>
+                    <div class="form-group"><label for="content-custom-title">Custom Order Title</label><input type="text" id="content-custom-title" required></div>
+                    <div class="form-group"><label for="content-custom-description">Custom Order Description</label><textarea id="content-custom-description" rows="2" required></textarea></div>
+                    <div class="form-group"><label for="content-custom-form-title">Custom Form Title</label><input type="text" id="content-custom-form-title" required></div>
+                    <div class="form-group"><label for="content-about-title">About Title</label><input type="text" id="content-about-title" required></div>
+                    <div class="form-group"><label for="content-about-description">About Description</label><textarea id="content-about-description" rows="3" required></textarea></div>
+                    <div class="form-group"><label for="content-about-secondary">About Secondary Text</label><textarea id="content-about-secondary" rows="2" required></textarea></div>
+                    <div class="form-group"><label for="content-footer-description">Footer Description</label><textarea id="content-footer-description" rows="2" required></textarea></div>
+                    <button type="submit" class="gold-btn full-btn">Save Front Page</button>
+                </form>
+
+                <form id="product-form" class="custom-form" onsubmit="handleSaveProduct(event)">
+                    <h3 id="form-title">Add New Product</h3>
+                    <input type="hidden" id="edit-product-id">
+
+                    <div class="form-group">
+                        <label for="prod-name">Product Name</label>
+                        <input type="text" id="prod-name" placeholder="e.g. Gold Epoxy Clock" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-category">Category</label>
+                        <select id="prod-category" required>
+                            <option value="Epoxy Wall Art">Epoxy Wall Art</option>
+                            <option value="Shine Photos">Shine Photos</option>
+                            <option value="Neon Lights">Neon Lights</option>
+                            <option value="Light Boxes">Light Boxes</option>
+                            <option value="Home Decor">Home Decor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-image-file">Product Image (Upload File or Enter URL)</label>
+                        <input type="file" id="prod-image-file" accept="image/*" onchange="handleImageUpload(event)" style="margin-bottom: 8px; width: 100%; color: var(--text-muted);">
+                        <input type="text" id="prod-image" placeholder="Or paste image URL (https://...)" required>
+                        <div id="image-preview-container" class="hidden" style="margin-top: 10px;">
+                            <img id="image-preview" src="" alt="Image Preview" style="max-height: 120px; border-radius: var(--radius-sm); border: 1px solid var(--border); object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-price">Price Display</label>
+                        <input type="text" id="prod-price" placeholder="Custom Quote or ETB 2,500" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-description">Description</label>
+                        <textarea id="prod-description" rows="3" placeholder="Enter product details..." required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="gold-btn full-btn" id="save-prod-btn">Add Product</button>
+                        <button type="button" class="outline-btn full-btn hidden" id="cancel-edit-btn" onclick="resetProductForm()">Cancel Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-modal" class="modal"></div>
+
+    <script>
+        /* =========================================================
+           RAMA CRAFT - Dynamic Logic
+        ========================================================= */
+
+        const DEFAULT_PRODUCTS = [
+            {
+                id: "rc-01",
+                name: "Royal Gold & Emerald Epoxy Wall Art",
+                category: "Epoxy Wall Art",
+                image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+                description: "Premium handmade epoxy wall art with a luxury gold and emerald design.",
+                price: "Custom Quote"
+            },
+            {
+                id: "rc-02",
+                name: "Custom Illuminated Acrylic Neon Sign",
+                category: "Neon Lights",
+                image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80",
+                description: "Custom LED neon sign made for bedrooms, businesses, restaurants and events.",
+                price: "Custom Quote"
+            },
+            {
+                id: "rc-03",
+                name: "Resin Gloss Shine Photo Frame",
+                category: "Shine Photos",
+                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
+                description: "Turn your favorite photo into a beautiful glossy resin shine frame.",
+                price: "Custom Quote"
+            },
+            {
+                id: "rc-04",
+                name: "Luxury Backlit Light Box Art",
+                category: "Light Boxes",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+                description: "Premium decorative light box with custom artwork and LED illumination.",
+                price: "Custom Quote"
+            },
+            {
+                id: "rc-05",
+                name: "Epoxy Geode River Decorative Tray",
+                category: "Home Decor",
+                image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80",
+                description: "Elegant handmade epoxy decorative tray designed for luxury interiors.",
+                price: "Custom Quote"
+            },
+            {
+                id: "rc-06",
+                name: "Minimalist Linear Neon Wall Accent",
+                category: "Neon Lights",
+                image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=600&q=80",
+                description: "Modern minimalist LED neon wall decoration for homes and businesses.",
+                price: "Custom Quote"
+            }
+        ];
+
+        /* STATE */
+        let PRODUCTS = JSON.parse(localStorage.getItem("rama_products")) || DEFAULT_PRODUCTS;
+        let cart = JSON.parse(localStorage.getItem("rama_cart")) || [];
+        const savedUser = JSON.parse(localStorage.getItem("rama_user"));
+        let currentUser = savedUser || null;
+        let isAdmin = JSON.parse(localStorage.getItem("rama_is_admin")) || false;
+        let activeCategory = "All";
+        const DEFAULT_CONTENT = {
+            announcement: "Custom Luxury Epoxy Arts, Neon Lights & Premium Decor",
+            brandName: "RAMA CRAFT",
+            brandTagline: "BY NATY",
+            heroTitle: "Transform Your Space",
+            heroSubtitle: "With Epoxy Art & Custom Lighting",
+            heroDescription: "Discover handmade epoxy artwork, custom neon lights, shine photo frames, light boxes and premium home decor crafted by RAMA CRAFT.",
+            collectionTitle: "Crafted For Your Space",
+            collectionDescription: "Explore our premium handmade products and find something special for your home or business.",
+            customTitle: "Create Something",
+            customDescription: "Have your own idea? Tell us what you want and RAMA CRAFT will create a custom piece specially for you.",
+            customFormTitle: "Request a Custom Order",
+            aboutTitle: "Art Made With",
+            aboutDescription: "RAMA CRAFT - BY NATY creates premium handmade epoxy artwork, custom lighting and decorative pieces designed to make your space unique.",
+            aboutSecondary: "Every piece is carefully designed and crafted with attention to detail, quality and style.",
+            footerDescription: "Premium handmade epoxy art, neon lights, shine photos and home decor."
+        };
+        let siteContent = { ...DEFAULT_CONTENT, ...(JSON.parse(localStorage.getItem("rama_site_content")) || {}) };
+
+        /* DOM ELEMENTS */
+        const productsGrid = document.getElementById("products-grid");
+        const catalogSearch = document.getElementById("catalog-search");
+        const noProducts = document.getElementById("no-products");
+        const productModal = document.getElementById("product-modal");
+        const cartDrawer = document.getElementById("cart-drawer");
+        const cartOverlay = document.getElementById("cart-overlay");
+        const authModal = document.getElementById("auth-modal");
+        const adminModal = document.getElementById("admin-modal");
+        const cartCount = document.getElementById("cart-count");
+        const cartItems = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        const authButtonText = document.getElementById("auth-button-text");
+        const mobileNav = document.getElementById("mobile-nav");
+        const adminBadge = document.getElementById("admin-badge");
+
+        /* INIT */
+        document.addEventListener("DOMContentLoaded", () => {
+            applySiteContent();
+            renderProducts(PRODUCTS);
+            updateCartUI();
+            updateAuthUI();
+            updateAdminUI();
+            if (window.location.hash === "#admin" && isAdmin) {
+                openAdminModal();
+            }
+        });
+
+        /* RENDER PRODUCTS */
+        function renderProducts(items) {
+            if (!productsGrid) return;
+            productsGrid.innerHTML = "";
+
+            if (items.length === 0) {
+                if (noProducts) noProducts.classList.remove("hidden");
+                return;
+            }
+
+            if (noProducts) noProducts.classList.add("hidden");
+
+            items.forEach(product => {
+                const article = document.createElement("article");
+                article.className = "product-card";
+
+                const adminControls = isAdmin ? `
+                    <div class="product-admin-actions">
+                        <button class="edit-btn" onclick="openEditProduct('${product.id}')"><i class="fa-solid fa-pen"></i> Edit</button>
+                        <button class="delete-btn" onclick="deleteProduct('${product.id}')"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                ` : `
+                    <button class="gold-btn" style="padding:6px 16px; font-size:12px;" onclick="openProductModal('${product.id}')">View</button>
+                `;
+
+                article.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${escapeHTML(product.name)}" loading="lazy" onerror="this.src='https://via.placeholder.com/300/171717/f6b036?text=RAMA+CRAFT'">
+                        <span class="product-category">${escapeHTML(product.category)}</span>
+                    </div>
+                    <div class="product-body">
+                        <h3>${escapeHTML(product.name)}</h3>
+                        <p>${escapeHTML(product.description)}</p>
+                        <div class="product-bottom">
+                            <span class="product-price">${escapeHTML(product.price)}</span>
+                            ${adminControls}
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(article);
+            });
+        }
+
+        /* CATEGORY & SEARCH */
+        function filterCategory(category) {
+            activeCategory = category;
+            document.querySelectorAll(".category-btn").forEach(button => {
+                button.classList.remove("active");
+                const text = button.textContent.trim();
+                if ((category === "All" && text === "All Pieces") || text === category) {
+                    button.classList.add("active");
+                }
+            });
+            filterAndRender();
+        }
+
+        function handleSearch() {
+            filterAndRender();
+        }
+
+        function filterAndRender() {
+            const query = catalogSearch ? catalogSearch.value.toLowerCase().trim() : "";
+            const filtered = PRODUCTS.filter(product => {
+                const matchesCategory = activeCategory === "All" || product.category === activeCategory;
+                const matchesSearch = product.name.toLowerCase().includes(query) ||
+                                      product.category.toLowerCase().includes(query) ||
+                                      product.description.toLowerCase().includes(query);
+                return matchesCategory && matchesSearch;
+            });
+            renderProducts(filtered);
+        }
+
+        function focusSearch() {
+            if (!catalogSearch) return;
+            catalogSearch.focus();
+            catalogSearch.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        /* ADMIN SYSTEM */
+        function openAdminModal() {
+            if (!adminModal) return;
+            adminModal.classList.add("show");
+            document.body.classList.add("modal-open");
+
+            if (isAdmin) {
+                populateContentForm();
+                document.getElementById("admin-login-view").classList.add("hidden");
+                document.getElementById("admin-dashboard-view").classList.remove("hidden");
+            } else {
+                document.getElementById("admin-login-view").classList.remove("hidden");
+                document.getElementById("admin-dashboard-view").classList.add("hidden");
+            }
+        }
+
+        function closeAdminModal() {
+            if (!adminModal) return;
+            adminModal.classList.remove("show");
+            document.body.classList.remove("modal-open");
+        }
+
+        function handleAdminLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById("admin-username")?.value.trim();
+            const pass = document.getElementById("admin-password")?.value;
+            const extraAdmins = JSON.parse(localStorage.getItem("rama_admin_accounts")) || [];
+            const isBuiltInAdmin = username === "Rama Craft" && (pass === "Ramacraft" || pass === "6267@mita");
+            const isAddedAdmin = extraAdmins.some(account => account.username === username && account.password === pass);
+
+            if (isBuiltInAdmin || isAddedAdmin) {
+                isAdmin = true;
+                localStorage.setItem("rama_is_admin", JSON.stringify(true));
+                updateAdminUI();
+                showToast("Signed in");
+                window.open(window.location.href.split("#")[0] + "#admin", "_blank");
+                closeAdminModal();
+            } else {
+                
+                          showToast("Incorrect Password");
+            }
+        }
+
+        function handleAddAdmin(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById("new-admin-username");
+            const passwordInput = document.getElementById("new-admin-password");
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
+            const extraAdmins = JSON.parse(localStorage.getItem("rama_admin_accounts")) || [];
+
+            if (username === "admin" || extraAdmins.some(account => account.username === username)) {
+                showToast("Username already exists");
+                return;
+            }
+
+            extraAdmins.push({ username, password });
+            localStorage.setItem("rama_admin_accounts", JSON.stringify(extraAdmins));
+            event.target.reset();
+            showToast("New admin added");
+        }
+
+        function applySiteContent() {
+            const contentElements = {
+                "announcement-text": siteContent.announcement,
+                "brand-name": siteContent.brandName,
+                "brand-tagline": siteContent.brandTagline,
+                "hero-title": siteContent.heroTitle,
+                "hero-subtitle": siteContent.heroSubtitle,
+                "hero-description": siteContent.heroDescription,
+                "collection-title": siteContent.collectionTitle,
+                "collection-description": siteContent.collectionDescription,
+                "custom-title": siteContent.customTitle,
+                "custom-description-text": siteContent.customDescription,
+                "custom-form-title": siteContent.customFormTitle,
+                "about-title": siteContent.aboutTitle,
+                "about-description": siteContent.aboutDescription,
+                "about-secondary": siteContent.aboutSecondary,
+                "footer-description": siteContent.footerDescription
+            };
+
+            Object.entries(contentElements).forEach(([id, value]) => {
+                const element = document.getElementById(id);
+                if (element) element.textContent = value;
+            });
+        }
+
+        function populateContentForm() {
+            const fields = {
+                "content-announcement": siteContent.announcement,
+                "content-brand-name": siteContent.brandName,
+                "content-brand-tagline": siteContent.brandTagline,
+                "content-hero-title": siteContent.heroTitle,
+                "content-hero-subtitle": siteContent.heroSubtitle,
+                "content-hero-description": siteContent.heroDescription,
+                "content-collection-title": siteContent.collectionTitle,
+                "content-collection-description": siteContent.collectionDescription,
+                "content-custom-title": siteContent.customTitle,
+                "content-custom-description": siteContent.customDescription,
+                "content-custom-form-title": siteContent.customFormTitle,
+                "content-about-title": siteContent.aboutTitle,
+                "content-about-description": siteContent.aboutDescription,
+                "content-about-secondary": siteContent.aboutSecondary,
+                "content-footer-description": siteContent.footerDescription
+            };
+
+            Object.entries(fields).forEach(([id, value]) => {
+                const field = document.getElementById(id);
+                if (field) field.value = value;
+            });
+        }
+
+        function handleSaveContent(event) {
+            event.preventDefault();
+            const fieldMap = {
+                announcement: "content-announcement",
+                brandName: "content-brand-name",
+                brandTagline: "content-brand-tagline",
+                heroTitle: "content-hero-title",
+                heroSubtitle: "content-hero-subtitle",
+                heroDescription: "content-hero-description",
+                collectionTitle: "content-collection-title",
+                collectionDescription: "content-collection-description",
+                customTitle: "content-custom-title",
+                customDescription: "content-custom-description",
+                customFormTitle: "content-custom-form-title",
+                aboutTitle: "content-about-title",
+                aboutDescription: "content-about-description",
+                aboutSecondary: "content-about-secondary",
+                footerDescription: "content-footer-description"
+            };
+
+            Object.entries(fieldMap).forEach(([key, id]) => {
+                siteContent[key] = document.getElementById(id).value.trim();
+            });
+            localStorage.setItem("rama_site_content", JSON.stringify(siteContent));
+            applySiteContent();
+            showToast("Front page updated");
+        }
+
+        function togglePasswordVisibility(inputId, button) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+
+            const isHidden = input.type === "password";
+            input.type = isHidden ? "text" : "password";
+            button.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
+            button.innerHTML = `<i class="fa-solid fa-eye${isHidden ? "-slash" : ""}"></i>`;
+        }
+
+        function handleAdminLogout() {
+            isAdmin = false;
+            localStorage.removeItem("rama_is_admin");
+            updateAdminUI();
+            closeAdminModal();
+            showToast("Logged out");
+        }
+
+        function updateAdminUI() {
+            if (adminBadge) {
+                if (isAdmin) {
+                    adminBadge.classList.remove("hidden");
+                } else {
+                    adminBadge.classList.add("hidden");
+                }
+            }
+            renderProducts(PRODUCTS);
+        }
+
+        function handleSaveProduct(event) {
+            event.preventDefault();
+
+            const idInput = document.getElementById("edit-product-id").value;
+            const name = document.getElementById("prod-name").value.trim();
+            const category = document.getElementById("prod-category").value;
+            const image = document.getElementById("prod-image").value.trim();
+            const price = document.getElementById("prod-price").value.trim();
+            const description = document.getElementById("prod-description").value.trim();
+
+            if (idInput) {
+                const index = PRODUCTS.findIndex(p => p.id === idInput);
+                if (index !== -1) {
+                    PRODUCTS[index] = { id: idInput, name, category, image, price, description };
+                    showToast("Product updated");
+                }
+            } else {
+                const newProduct = {
+                    id: "rc-" + Date.now(),
+                    name,
+                    category,
+                    image,
+                    price,
+                    description
+                };
+                PRODUCTS.unshift(newProduct);
+                showToast("New product added");
+            }
+
+            saveProducts();
+            renderProducts(PRODUCTS);
+            resetProductForm();
+            closeAdminModal();
+        }
+
+        function openEditProduct(id) {
+            const product = PRODUCTS.find(p => p.id === id);
+            if (!product) return;
+
+            openAdminModal();
+
+            document.getElementById("edit-product-id").value = product.id;
+            document.getElementById("prod-name").value = product.name;
+            document.getElementById("prod-category").value = product.category;
+            document.getElementById("prod-image").value = product.image;
+            document.getElementById("prod-price").value = product.price;
+            document.getElementById("prod-description").value = product.description;
+
+            showImagePreview(product.image);
+
+            document.getElementById("form-title").textContent = "Edit Product";
+            document.getElementById("save-prod-btn").textContent = "Save Changes";
+            document.getElementById("cancel-edit-btn").classList.remove("hidden");
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageDataUrl = e.target.result;
+                document.getElementById("prod-image").value = imageDataUrl;
+                showImagePreview(imageDataUrl);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function showImagePreview(url) {
+            const previewContainer = document.getElementById("image-preview-container");
+            const previewImg = document.getElementById("image-preview");
+            if (previewContainer && previewImg && url) {
+                previewImg.src = url;
+                previewContainer.classList.remove("hidden");
+            }
+        }
+
+        function resetProductForm() {
+            document.getElementById("product-form").reset();
+            document.getElementById("edit-product-id").value = "";
+            document.getElementById("form-title").textContent = "Add New Product";
+            document.getElementById("save-prod-btn").textContent = "Add Product";
+            document.getElementById("cancel-edit-btn").classList.add("hidden");
+
+            const fileInput = document.getElementById("prod-image-file");
+            if (fileInput) fileInput.value = "";
+            const previewContainer = document.getElementById("image-preview-container");
+            if (previewContainer) previewContainer.classList.add("hidden");
+        }
+
+        function startNewProduct() {
+            resetProductForm();
+            const productForm = document.getElementById("product-form");
+            if (productForm) productForm.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function toggleAdminForm() {
+            const adminForm = document.getElementById("admin-form");
+            if (!adminForm) return;
+
+            adminForm.classList.toggle("hidden");
+            if (!adminForm.classList.contains("hidden")) {
+                adminForm.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+
+        function toggleContentEditor() {
+            const contentForm = document.getElementById("content-form");
+            if (!contentForm) return;
+
+            contentForm.classList.toggle("hidden");
+            if (!contentForm.classList.contains("hidden")) {
+                populateContentForm();
+                contentForm.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+
+        function deleteProduct(id) {
+            if (confirm("Are you sure you want to delete this product?")) {
+                PRODUCTS = PRODUCTS.filter(p => p.id !== id);
+                saveProducts();
+                renderProducts(PRODUCTS);
+                showToast("Product deleted");
+            }
+        }
+
+        function saveProducts() {
+            localStorage.setItem("rama_products", JSON.stringify(PRODUCTS));
+        }
+
+        /* PRODUCT MODAL */
+        function openProductModal(id) {
+            const product = PRODUCTS.find(item => item.id === id);
+            if (!product || !productModal) return;
+
+            productModal.innerHTML = `
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeProductModal()"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="modal-product-grid">
+                        <div class="modal-product-image">
+                            <img src="${product.image}" alt="${escapeHTML(product.name)}" onerror="this.src='https://via.placeholder.com/300/171717/f6b036?text=RAMA+CRAFT'">
+                        </div>
+                        <div class="modal-product-info">
+                            <span class="modal-category">${escapeHTML(product.category)}</span>
+                            <h2>${escapeHTML(product.name)}</h2>
+                            <p>${escapeHTML(product.description)}</p>
+                            <div class="modal-price">${escapeHTML(product.price)}</div>
+                            <div class="modal-actions">
+                                <button class="gold-btn" onclick="addToCart('${product.id}')"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                                <button class="outline-btn" onclick="orderProduct('${product.id}')"><i class="fa-brands fa-telegram"></i> Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productModal.classList.add("show");
+            document.body.classList.add("modal-open");
+        }
+
+        function closeProductModal() {
+            if (!productModal) return;
+            productModal.classList.remove("show");
+            document.body.classList.remove("modal-open");
+        }
+
+        /* CART */
+        function addToCart(id) {
+            const product = PRODUCTS.find(item => item.id === id);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    category: product.category,
+                    image: product.image,
+                    price: product.price,
+                    quantity: 1
+                });
+            }
+
+            saveCart();
+            updateCartUI();
+            showToast("Added to cart");
+            closeProductModal();
+            toggleCartDrawer(true);
+        }
+
+        function orderProduct(id) {
+            const product = PRODUCTS.find(item => item.id === id);
+            if (!product) return;
+            const message = `Hello RAMA CRAFT 👋\n\nI want to order:\nProduct: ${product.name}\nCategory: ${product.category}\nPrice: ${product.price}\n\nPlease give me more details.`;
+            window.open("https://t.me/Rama_Craft?text=" + encodeURIComponent(message), "_blank");
+        }
+
+        function updateQuantity(id, change) {
+            const item = cart.find(product => product.id === id);
+            if (!item) return;
+
+            item.quantity += change;
+            if (item.quantity <= 0) {
+                cart = cart.filter(product => product.id !== id);
+            }
+
+            saveCart();
+            updateCartUI();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(product => product.id !== id);
+            saveCart();
+            updateCartUI();
+            showToast("Item removed");
+        }
+
+        function saveCart() {
+            localStorage.setItem("rama_cart", JSON.stringify(cart));
+        }
+
+        function updateCartUI() {
+            if (cartCount) {
+                const quantity = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = quantity;
+            }
+
+            if (!cartItems) return;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add your favorite RAMA CRAFT products.</p>
+                    </div>
+                `;
+                if (cartTotal) cartTotal.textContent = "Custom Quote";
+                return;
+            }
+
+            cartItems.innerHTML = "";
+            cart.forEach(item => {
+                const div = document.createElement("div");
+                div.className = "cart-item";
+                div.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${escapeHTML(item.name)}" onerror="this.src='https://via.placeholder.com/100/171717/f6b036?text=RAMA'">
+                    </div>
+                    <div class="cart-item-info">
+                        <h4>${escapeHTML(item.name)}</h4>
+                        <span>${escapeHTML(item.price)}</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('${item.id}', -1)">−</button>
+                            <strong>${item.quantity}</strong>
+                            <button onclick="updateQuantity('${item.id}', 1)">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-cart-item" onclick="removeFromCart('${item.id}')">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                `;
+                cartItems.appendChild(div);
+            });
+
+            if (cartTotal) cartTotal.textContent = "Custom Quote";
+        }
+
+        function toggleCartDrawer(forceOpen = null) {
+            if (!cartDrawer) return;
+            let shouldOpen = forceOpen !== null ? forceOpen : !cartDrawer.classList.contains("open");
+
+            if (shouldOpen) {
+                cartDrawer.classList.add("open");
+                if (cartOverlay) cartOverlay.classList.add("show");
+                document.body.classList.add("drawer-open");
+            } else {
+                cartDrawer.classList.remove("open");
+                if (cartOverlay) cartOverlay.classList.remove("show");
+                document.body.classList.remove("drawer-open");
+            }
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty");
+                return;
+            }
+            if (!currentUser) {
+                openAuthModal();
+                return;
+            }
+            sendCartToTelegram();
+        }
+
+        function sendCartToTelegram() {
+            let message = `Hello RAMA CRAFT 👋\n\nI want to order:\nCustomer: ${currentUser.phone}\n\n`;
+            cart.forEach((item, index) => {
+                message += `${index + 1}. ${item.name} (x${item.quantity})\n`;
+            });
+            message += `\nPlease send me the price details and delivery info.`;
+            window.open("https://t.me/Rama_Craft?text=" + encodeURIComponent(message), "_blank");
+            cart = [];
+            saveCart();
+            updateCartUI();
+            toggleCartDrawer(false);
+            showToast("Order sent");
+        }
+
+        function handleCustomOrderSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById("custom-name")?.value.trim();
+            const phone = document.getElementById("custom-phone")?.value.trim();
+            const craft = document.getElementById("custom-craft")?.value.trim();
+            const description = document.getElementById("custom-description")?.value.trim();
+
+            const message = `Hello RAMA CRAFT 👋\n\nCustom Order Request:\nName: ${name}\nPhone: ${phone}\nCraft Type: ${craft}\n\nDetails:\n${description}`;
+            window.open("https://t.me/Rama_Craft?text=" + encodeURIComponent(message), "_blank");
+            event.target.reset();
+            showToast("Opening Telegram...");
+        }
+
+        /* AUTH */
+        function openAuthModal() {
+            if (!authModal) return;
+            authModal.classList.add("show");
+            document.body.classList.add("modal-open");
+            showAuthLogin();
+        }
+
+        function closeAuthModal() {
+            if (!authModal) return;
+            authModal.classList.remove("show");
+            document.body.classList.remove("modal-open");
+        }
+
+        function openGuestLogin() {
+            const loginView = document.getElementById("auth-login-view");
+            const guestView = document.getElementById("guest-login-view");
+            if (loginView && guestView) {
+                loginView.classList.add("hidden");
+                guestView.classList.remove("hidden");
+            }
+        }
+
+        function showAuthLogin() {
+            const loginView = document.getElementById("auth-login-view");
+            const guestView = document.getElementById("guest-login-view");
+            if (loginView && guestView) {
+                loginView.classList.remove("hidden");
+                guestView.classList.add("hidden");
+            }
+        }
+
+        function handlePhoneAuth(event) {
+            event.preventDefault();
+            const countryCode = document.getElementById("country-code")?.value || "+251";
+            const phoneInput = document.getElementById("phone-number");
+            if (!phoneInput) return;
+
+            const phone = phoneInput.value.trim();
+            currentUser = { phone: countryCode + phone };
+            saveUser();
+            updateAuthUI();
+            closeAuthModal();
+            const action = event.submitter?.value === "signup" ? "Account created" : "Signed in successfully";
+            showToast(action);
+        }
+
+        function continueAsGuest(event) {
+            event.preventDefault();
+            const name = document.getElementById("guest-name")?.value.trim();
+            const phone = document.getElementById("guest-phone")?.value.trim();
+            currentUser = { name, phone, isGuest: true };
+            saveUser();
+            updateAuthUI();
+            closeAuthModal();
+            showToast("Signed in as guest");
+        }
+
+        function saveUser() {
+            localStorage.setItem("rama_user", JSON.stringify(currentUser));
+        }
+
+        function updateAuthUI() {
+            if (!authButtonText) return;
+            if (!currentUser) {
+                authButtonText.textContent = "Sign In";
+                return;
+            }
+            authButtonText.textContent = currentUser.isGuest ? "Guest" : currentUser.phone;
+        }
+
+        /* UTILS */
+        function toggleMobileNav() {
+            if (mobileNav) mobileNav.classList.toggle("open");
+        }
+
+        function showToast(message) {
+            let toast = document.getElementById("rama-toast");
+            if (!toast) {
+                toast = document.createElement("div");
+                toast.id = "rama-toast";
+                toast.className = "toast";
+                document.body.appendChild(toast);
+            }
+            toast.textContent = message;
+            toast.classList.add("show");
+            clearTimeout(window.ramaToastTimer);
+            window.ramaToastTimer = setTimeout(() => {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+
+        function escapeHTML(value) {
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+
+</html>
